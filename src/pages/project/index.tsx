@@ -3,36 +3,20 @@ import ProjectCard from '@/components/layout/projectCard';
 import Section from '@/components/layout/section';
 import { useRouter } from 'next/navigation';
 import React from 'react';
-
-interface ProjectData {
-  type: string;
-  title: string;
-  detail: string;
-  img: string;
-}
-
-const projectList: ProjectData[] = [
-  {
-    type: 'web',
-    title: 'TEDxITS',
-    detail:
-      'TEDx is a global community initiative aimed at discovering and sharing innovative ideas through local events organized by passionate individuals, which include live speakers and recorded TED Talks.',
-    img: 'images/project-1.png',
-  },
-];
+import { ProjectList, ProjectProps } from '@/utils/data';
 
 const Index = () => {
   const router = useRouter();
   const filterTypes = ['all', 'web', 'mobile'];
   const [selectedFilter, setSelectedFilter] = React.useState<string>('all');
   const [filteredData, setFilteredData] =
-    React.useState<ProjectData[]>(projectList);
+    React.useState<ProjectProps[]>(ProjectList);
 
   React.useEffect(() => {
     if (selectedFilter === 'all') {
-      setFilteredData(projectList);
+      setFilteredData(ProjectList);
     } else {
-      const filtered = projectList.filter(
+      const filtered = ProjectList.filter(
         (data) => data.type === selectedFilter
       );
       setFilteredData(filtered);
@@ -64,11 +48,11 @@ const Index = () => {
           return (
             <div
               key={item.title}
-              // onClick={() => router.push(`/project/${item.title}`)}
+              onClick={() => router.push(`/project/${item.title}`)}
             >
               <ProjectCard
                 title={item.title}
-                img={item.img}
+                img={item.thumbnail}
                 detail={item.detail}
               />
             </div>

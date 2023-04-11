@@ -4,6 +4,7 @@ import Section from '@/components/layout/section';
 import Link from '@/components/link/link';
 import EarthCanvas from '@/components/three/earth';
 import Head from 'next/head';
+import Image from 'next/image';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
 export default function Home() {
@@ -24,10 +25,12 @@ export default function Home() {
             <p className='font-sm'>Freelance Developer (Website / Mobile)</p>
           </div>
           <div className='h-32 w-32 flex-shrink-0 cursor-pointer overflow-hidden rounded-full border-2 border-white hover:opacity-75 max-md:h-24 max-md:w-24'>
-            <img
-              src='images/image-profile.jpg'
-              alt=''
-              className='h-full w-full  object-cover '
+            <Image
+              src='/images/image-profile.jpg'
+              alt='profile image'
+              width={128}
+              height={128}
+              className='h-full w-full object-cover'
             />
           </div>
         </Section>

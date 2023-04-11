@@ -12,7 +12,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div
       className={clsxm(
-        'mx-auto min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px]'
+        'mx-auto min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px] max-md:pt-28'
       )}
     >
       <EarthCanvas />
