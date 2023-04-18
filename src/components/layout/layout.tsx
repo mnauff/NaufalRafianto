@@ -1,7 +1,7 @@
 import clsxm from '@/utils/clsx';
 import * as React from 'react';
 import EarthCanvas from '../three/earth';
-import Footer from './footer';
+import { motion } from 'framer-motion';
 
 interface Props {
   children: React.ReactNode;
@@ -10,7 +10,11 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div
+    <motion.div
+      initial={{ y: '100%' }}
+      animate={{ y: '0%' }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 1, ease: 'easeInOut' }}
       className={clsxm(
         'mx-auto min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px] max-md:pt-28'
       )}
@@ -18,7 +22,7 @@ const Layout = ({ children }: Props) => {
       <EarthCanvas />
 
       <div>{children}</div>
-    </div>
+    </motion.div>
   );
 };
 

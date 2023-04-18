@@ -1,3 +1,7 @@
+import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { CgWebsite } from 'react-icons/cg';
+import { IconType } from 'react-icons/lib';
+
 export interface ProjectProps {
   type: string;
   title: string;
@@ -6,6 +10,11 @@ export interface ProjectProps {
   galery: string[];
   link: string;
   stack: string[];
+}
+export interface SocialProps {
+  name: string;
+  href: string;
+  icon: IconType;
 }
 
 export const ProjectList: ProjectProps[] = [
@@ -25,5 +34,28 @@ export const ProjectList: ProjectProps[] = [
       '/images/project-1/gallery (5).png',
       '/images/project-1/gallery (6).png',
     ],
+  },
+];
+
+export const socialData: SocialProps[] = [
+  {
+    name: 'My Website',
+    icon: CgWebsite,
+    href: 'https://www.mnr.vercel.app/',
+  },
+  {
+    name: 'Instagram',
+    icon: BsInstagram,
+    href: 'https://www.instagram.com/naufal.rafianto/',
+  },
+  {
+    name: 'Github',
+    icon: BsGithub,
+    href: 'https://github.com/naufalRafianto',
+  },
+  {
+    name: 'LinkedIn',
+    icon: BsLinkedin,
+    href: 'https://www.linkedin.com/in/naufal-rafianto-4159a8206/',
   },
 ];

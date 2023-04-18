@@ -59,7 +59,7 @@ const Index = () => {
         <h1 className='my-10 text-center font-secondary text-3xl font-bold uppercase'>
           Gallery
         </h1>
-        <div className='grid  max-h-screen grid-cols-2 space-y-3'>
+        <div className='grid  max-h-screen grid-cols-2 space-y-3 max-md:w-11/12'>
           {filter?.galery.map((image, index) => (
             <Image
               src={image}

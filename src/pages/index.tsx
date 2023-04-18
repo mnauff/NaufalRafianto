@@ -43,10 +43,15 @@ export default function Home() {
             As a freelance web and mobile developer with one year of experience,
             I am passionate about crafting high-quality applications that meet
             my client&apos;s needs. I have a solid foundation in web development
-            technologies such as HTML, CSS, and JavaScript, as well as
-            experience in mobile app development using React Native. I am
-            constantly learning and keeping up-to-date with the latest trends
-            and best practices in the industry.
+            technologies such as{' '}
+            <span className='text-accent'>
+              {' '}
+              HTML, CSS, JavaScript, ReactJS, TailwindCSS, NextJS, NodeJS{' '}
+            </span>
+            etc. As well as experience in mobile app development using{' '}
+            <span className='text-accent'>React Native</span>. I am constantly
+            learning and keeping up-to-date with the latest trends and best
+            practices in the industry.
           </p>
           <div className='flex justify-center'>
             <Link
