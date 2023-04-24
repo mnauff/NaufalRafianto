@@ -2,7 +2,6 @@
 import Layout from '@/components/layout/layout';
 import Section from '@/components/layout/section';
 import Link from '@/components/link/link';
-import EarthCanvas from '@/components/three/earth';
 import Head from 'next/head';
 import Image from 'next/image';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
@@ -19,7 +18,7 @@ export default function Home() {
       <Layout>
         <Section size='small' flex>
           <div>
-            <h1 className='font-secondary text-[40px] font-bold'>
+            <h1 className='font-secondary text-4xl font-bold uppercase'>
               Naufal Rafianto
             </h1>
             <p className='font-sm'>Freelance Developer (Website / Mobile)</p>
@@ -38,7 +37,7 @@ export default function Home() {
           <h1 className='relative mb-5 ml-5 w-fit cursor-pointer text-start text-lg font-bold uppercase after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:bg-accent after:bg-opacity-50 after:hover:bg-opacity-100'>
             About Me
           </h1>
-          <p className='mx-auto w-[90%] text-justify font-extralight'>
+          <p className='mx-auto w-[90%] text-justify font-light'>
             Hi there! I&apos;m Naufal, a freelance developer based on Indonesia.
             As a freelance web and mobile developer with one year of experience,
             I am passionate about crafting high-quality applications that meet

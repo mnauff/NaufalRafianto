@@ -5,6 +5,11 @@ import '@/styles/globals.css';
 import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import { Raleway } from 'next/font/google';
+
+const raleway = Raleway({
+  subsets: ['latin'],
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -14,7 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <StarsCanvas />
       {showNavBar && <Header />}
       <AnimatePresence initial={false} mode={'wait'}>
-        <Component key={router.pathname} {...pageProps} />
+        <div className={raleway.className}>
+          <Component key={router.pathname} {...pageProps} />
+        </div>
       </AnimatePresence>
       {showNavBar && <Footer />}
     </>
