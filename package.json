@@ -28,6 +28,7 @@
         "typescript": "5.0.4"
     },
     "devDependencies": {
+        "@semantic-release/release-notes-generator": "^11.0.1",
         "@typescript-eslint/eslint-plugin": "^5.59.6",
         "@typescript-eslint/parser": "^5.59.6",
         "clsx": "^1.2.1",
