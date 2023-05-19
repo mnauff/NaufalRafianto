@@ -1,0 +1,45 @@
+'use client'
+import * as React from 'react'
+import { useRouter } from 'next/navigation'
+import { merge } from '@/lib/merge'
+
+interface LinkProps extends React.HTMLProps<HTMLAnchorElement> {
+    href: string
+    rel?: string
+    target?: string
+    className?: string
+    children: React.ReactNode
+}
+
+export const UnstyledLink = ({ href, rel, target, children, className, ...props }: LinkProps) => {
+    const router = useRouter()
+    const isInternalLink = href.startsWith('/') || href.startsWith('#')
+
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault()
+        if (isInternalLink) {
+            router.push(href)
+        } else {
+            window.open(href, target ?? '_blank', rel)
+        }
+    }
+    return (
+        <a className={merge(className)} href={href} onClick={handleClick} {...props}>
+            {children}
+        </a>
+    )
+}
+
+export const StyledLink = ({ className, href, children }: LinkProps) => {
+    return (
+        <UnstyledLink
+            className={merge(
+                'relative border-b border-dotted after:absolute after:bottom-[-1.5px] after:left-0 after:h-[.125rem] after:w-0 after:bg-lime-500 after:duration-100 after:hover:w-full',
+                className
+            )}
+            href={href}
+        >
+            {children}
+        </UnstyledLink>
+    )
+}
