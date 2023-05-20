@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unknown-property */
 'use client'
+import Header from '@/components/ui/Header'
 import { merge } from '@/lib/merge'
-import { PointMaterial, Points } from '@react-three/drei'
+import { PointMaterial, Points, Preload } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 import * as random from 'maath/random/dist/maath-random.cjs'
 import * as React from 'react'
@@ -25,13 +26,21 @@ function Stars({ ...props }) {
     )
 }
 
-export default function StarsContainer({ children, className }: { children: React.ReactNode; className?: string }) {
+export default function StarsContainer({ children, className }: { children: React.ReactNode; className: string }) {
     return (
-        <main className={merge('relative ', className)}>
-            {children}
-            <Canvas camera={{ position: [0, 0, 1] }} className="-z-50 h-full w-full">
-                <Stars />
-            </Canvas>
+        <main className={merge('relative inset-0 w-screen', className)}>
+            <Header />
+            <div className="absolute -z-10 h-full w-full">
+                <Canvas camera={{ position: [0, 0, 1] }}>
+                    <React.Suspense fallback={null}>
+                        <Stars />
+                    </React.Suspense>
+                    <Preload all />
+                </Canvas>
+            </div>
+            <div className="mx-auto  min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px] max-md:pt-28">
+                {children}
+            </div>
         </main>
     )
 }
