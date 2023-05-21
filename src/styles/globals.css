@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 :root {
-    @apply bg-black text-white;
+    @apply overflow-x-hidden bg-black text-white;
 }

@@ -1,15 +1,15 @@
 import { merge } from '@/lib/merge'
 import React from 'react'
 
-interface SectionProps {
+interface ContentProps {
     size: 'small' | 'medium' | 'large'
     flex?: true | false
     children: React.ReactNode
     className?: string
 }
 
-const Section = ({ size, children, flex, className }: SectionProps) => {
-    const sectionClasses = merge(
+const Content = ({ size, children, flex, className }: ContentProps) => {
+    const ContentClasses = merge(
         'mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-10 space-y-5',
         {
             'max-h-64': size === 'small',
@@ -23,7 +23,7 @@ const Section = ({ size, children, flex, className }: SectionProps) => {
         className
     )
 
-    return <div className={sectionClasses}>{children}</div>
+    return <div className={ContentClasses}>{children}</div>
 }
 
-export default Section
+export default Content

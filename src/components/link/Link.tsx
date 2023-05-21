@@ -34,7 +34,7 @@ export const StyledLink = ({ className, href, children }: LinkProps) => {
     return (
         <UnstyledLink
             className={merge(
-                'relative border-b border-dotted after:absolute after:bottom-[-1.5px] after:left-0 after:h-[.125rem] after:w-0 after:bg-lime-500 after:duration-100 after:hover:w-full',
+                'relative border-b border-dotted after:absolute after:bottom-[-1.5px] after:left-0 after:h-[.125rem] after:w-0 after:bg-violet-500 after:duration-100 after:hover:w-full',
                 className
             )}
             href={href}

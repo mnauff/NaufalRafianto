@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 'use client'
-import Header from '@/components/ui/Header'
+import Footer from '@/components/Footer/Footer'
+import Header from '@/components/Header/Header'
 import { merge } from '@/lib/merge'
 import { PointMaterial, Points, Preload } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
@@ -38,8 +39,9 @@ export default function StarsContainer({ children, className }: { children: Reac
                     <Preload all />
                 </Canvas>
             </div>
-            <div className="mx-auto  min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px] max-md:pt-28">
+            <div className="mx-auto min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px] max-md:pt-28">
                 {children}
+                <Footer />
             </div>
         </main>
     )
