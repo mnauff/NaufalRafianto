@@ -1,7 +1,7 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-import { StyledLink, UnstyledLink } from '../link/Link'
+import { StyledLink, UnstyledLink } from '../ui/link/Link'
 import { FaGithub } from 'react-icons/fa'
 import { merge } from '@/lib/merge'
 
@@ -19,7 +19,9 @@ export default function Header() {
                             ? 'rounded border-0 bg-violet-700 bg-opacity-30 px-2 py-1 text-violet-500 after:bg-violet-500 after:hover:w-0'
                             : pathname === '/project'
                             ? 'after:bg-pink-500'
-                            : 'after:bg-cyan-500'
+                            : pathname === '/send-letter'
+                            ? 'after:bg-cyan-500'
+                            : 'after:bg-orange-500'
                     )}
                     href="/"
                 >
@@ -31,7 +33,9 @@ export default function Header() {
                             ? 'rounded border-0 bg-pink-700 bg-opacity-30 px-2 py-1 text-pink-500 after:bg-pink-500 after:hover:w-0'
                             : pathname === '/'
                             ? ''
-                            : 'after:bg-cyan-500'
+                            : pathname === '/send-letter'
+                            ? 'after:bg-cyan-500'
+                            : 'after:bg-orange-500'
                     )}
                     href="/project"
                 >
@@ -41,7 +45,13 @@ export default function Header() {
                     <StyledLink
                         href="https://github.com/NaufalRafianto/mnr"
                         className={`${
-                            pathname === '/project' ? ' after:bg-pink-500' : pathname === '/' ? '' : 'after:bg-cyan-500'
+                            pathname === '/project'
+                                ? ' after:bg-pink-500'
+                                : pathname === '/'
+                                ? ''
+                                : pathname === '/send-letter'
+                                ? 'after:bg-cyan-500'
+                                : 'after:bg-orange-500'
                         }`}
                     >
                         Source

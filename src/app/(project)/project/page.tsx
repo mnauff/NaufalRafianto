@@ -1,5 +1,6 @@
-import Button from '@/components/link/Button'
-import { UnstyledLink } from '@/components/link/Link'
+import { Heading } from '@/components/ui/Heading'
+import Button from '@/components/ui/button/Button'
+import { UnstyledLink } from '@/components/ui/link/Link'
 import ProjectContainer from '@/container/ProjectContainer'
 import StarsContainer from '@/container/StarsContainer'
 import { prisma } from '@/lib/prisma'
@@ -13,9 +14,10 @@ export const metadata: Metadata = {
 }
 
 const Page = async () => {
-    const data = await prisma.project.findMany()
+    const data: Project[] = await prisma.project.findMany()
     return (
         <StarsContainer className="h-screen">
+            <Heading className="text-center">Project Overview</Heading>
             <ProjectContainer data={data} />
             <div className="flex w-full justify-center py-5">
                 <UnstyledLink href="/send-letter">

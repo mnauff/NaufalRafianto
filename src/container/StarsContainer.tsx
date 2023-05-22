@@ -41,8 +41,8 @@ export default function StarsContainer({ children, className }: { children: Reac
             </div>
             <div className="mx-auto min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px] max-md:pt-28">
                 {children}
-                <Footer />
             </div>
+            <Footer />
         </main>
     )
 }

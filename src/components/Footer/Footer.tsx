@@ -1,9 +1,9 @@
 import React from 'react'
 import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
-import { UnstyledLink } from '../link/Link'
+import { UnstyledLink } from '../ui/link/Link'
 const Footer = () => {
     return (
-        <footer className="mt-20 flex h-12 items-center justify-center bg-opacity-5 p-5">
+        <footer className="mt-20 flex h-12 w-full items-center justify-center bg-opacity-5 p-5">
             <div className="flex flex-col items-center justify-center gap-3">
                 <div className="flex gap-5">
                     <UnstyledLink href="https://www.instagram.com/naufal.rafianto/">

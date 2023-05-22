@@ -1,19 +1,8 @@
 'use client'
-import Button from '@/components/link/Button'
+import Button from '@/components/ui/button/Button'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
-
-interface Project {
-    id: string
-    type: string
-    title: string
-    detail: string
-    thumbnail: string
-    link: string
-    stack: string[]
-    gallery: string[]
-}
 
 interface ProjectDetails {
     data: Project[]
@@ -35,14 +24,15 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
     }, [selectedFilter])
     return (
         <div>
-            <div className="flex items-center justify-center space-x-4 py-5">
+            <div className="inline-flex items-center justify-start space-x-4 py-5">
+                <span>Filter by:</span>
                 {type.map((type) => {
                     return (
-                        <div key={type}>
+                        <div key={type} className="text-sm">
                             {selectedFilter === type ? (
                                 <Button
                                     color="first"
-                                    className="px-2 py-1"
+                                    className="px-2 py-1 "
                                     type="button"
                                     onClick={() => setSelectedFilter(type)}
                                 >
@@ -50,7 +40,7 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                                 </Button>
                             ) : (
                                 <button
-                                    className="text-secondary text-lg font-semibold focus:outline-none"
+                                    className="text-secondary  focus:outline-none"
                                     onClick={() => setSelectedFilter(type)}
                                 >
                                     {type.toUpperCase()}

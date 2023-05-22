@@ -14,6 +14,6 @@ model Project {
   detail    String
   thumbnail String
   link      String
-  stack     String[]
+  stack     String
   gallery   String[]
 }
