@@ -55,7 +55,7 @@ const page = async ({ params }: { params: { id: string } }) => {
             </div>
             <Content size="medium">
                 <Heading className="text-center uppercase">Gallery</Heading>
-                {data?.gallery.map((item, i) => (
+                {data?.gallery.map((item: string, i: number) => (
                     <div
                         key={i}
                         className="relative flex h-[305px] w-[550px] items-center justify-center rounded bg-gray-400"
