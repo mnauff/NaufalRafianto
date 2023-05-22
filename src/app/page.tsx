@@ -8,6 +8,12 @@ import { StyledLink, UnstyledLink } from '@/components/link/Link'
 import Button from '@/components/link/Button'
 import { MdOutlineKeyboardArrowRight, MdOutlineEmail } from 'react-icons/md'
 import { BsRocket } from 'react-icons/bs'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'MNR | Home',
+    description: 'Home page',
+}
 
 export default function Home() {
     return (
