@@ -12,8 +12,7 @@
         "format": "prettier --write .",
         "test-all": "npm run format && npm run check-format && npm run check-lint && npm run check-types && npm run build",
         "prepare": "husky install",
-        "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build"
+        "postinstall": "prisma generate"
     },
     "dependencies": {
         "@prisma/client": "^4.14.1",
