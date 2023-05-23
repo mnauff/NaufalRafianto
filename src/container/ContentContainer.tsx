@@ -2,7 +2,7 @@ import { merge } from '@/lib/merge'
 import React from 'react'
 
 interface ContentProps {
-    size: 'small' | 'medium' | 'large'
+    size?: 'small' | 'medium' | 'large'
     flex?: true | false
     children: React.ReactNode
     className?: string

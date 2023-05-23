@@ -6,13 +6,11 @@ import ProfilePict from '@/components/ProfilePic/ProfilePict'
 import { Heading } from '@/components/ui/Heading'
 import { StyledLink, UnstyledLink } from '@/components/ui/link/Link'
 import Button from '@/components/ui/button/Button'
-import { MdOutlineKeyboardArrowRight, MdOutlineEmail } from 'react-icons/md'
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { BsRocket } from 'react-icons/bs'
-import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-    title: 'MNR | Home',
-    description: 'Home page',
+export const metadata = {
+    title: 'Home Page | MNR',
 }
 
 export default function Home() {
@@ -65,19 +63,19 @@ export default function Home() {
                     <tbody>
                         <tr>
                             <td className="px-5  font-black text-pink-500">
-                                <Button color="second" type="button" className="px-2 py-1">
+                                <Button color="second" type="button" className="px-2 py-1 max-md:py-2">
                                     2003
                                 </Button>
                             </td>
-                            <td className="px-5">Born in Mataram City, Indonesia</td>
+                            <td className="px-5 max-md:py-2">Born in Mataram City, Indonesia</td>
                         </tr>
                         <tr>
                             <td className="px-5  font-black text-pink-500">
-                                <Button color="second" type="button" className="px-2 py-1">
+                                <Button color="second" type="button" className="px-2 py-1 max-md:py-2">
                                     2021
                                 </Button>
                             </td>
-                            <td className="px-5">
+                            <td className="px-5 max-md:py-2">
                                 Began studying Bachelor of Computer Engineering at the{' '}
                                 <StyledLink href="https://www.its.ac.id/">
                                     Sepuluh Nopember Institute of Technology
@@ -95,14 +93,6 @@ export default function Home() {
                         </tr>
                     </tbody>
                 </table>
-                <div className="flex w-full justify-center py-5">
-                    <UnstyledLink href="/send-letter">
-                        <Button type="button" className="gap-2 px-3 py-2" color="second">
-                            <span>Send me a letter</span>
-                            <MdOutlineEmail fontSize={24} />
-                        </Button>
-                    </UnstyledLink>
-                </div>
             </Content>
         </StarsContainer>
     )

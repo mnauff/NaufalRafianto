@@ -40,9 +40,9 @@ export default function StarsContainer({ children, className }: { children: Reac
                 </Canvas>
             </div>
             <div className="mx-auto min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px] max-md:pt-28">
-                {children}
+                <div>{children}</div>
+                <Footer />
             </div>
-            <Footer />
         </main>
     )
 }
