@@ -55,12 +55,18 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                     return (
                         <div
                             key={item.id}
-                            className="flex h-[405px] w-[305px] items-center justify-center rounded bg-pink-700 hover:bg-gradient-to-br hover:from-pink-500 hover:via-violet-500 hover:to-cyan-500"
+                            className="flex h-[405px] w-[305px] items-center justify-center rounded bg-pink-700 bg-gradient-to-br from-pink-500 via-violet-500 to-cyan-500"
                             onClick={() => router.push(`/project/${item.id}`)}
                         >
-                            <div className="grid h-[400px] w-[300px] cursor-pointer grid-rows-2 rounded border-opacity-0 bg-black p-7 ">
-                                <div className="h-2/5 w-full cursor-pointer bg-white duration-300 hover:scale-110">
-                                    <Image width={480} height={270} src={item.thumbnail} alt="project image" />
+                            <div className="grid h-[400px] w-[300px] cursor-pointer grid-rows-2 rounded  bg-black p-7 hover:bg-opacity-75 ">
+                                <div className="h-1/2 w-full cursor-pointer bg-white duration-300 hover:scale-110 hover:shadow">
+                                    <Image
+                                        width={480}
+                                        height={320}
+                                        src={item.thumbnail}
+                                        alt="project image"
+                                        className="object-cover"
+                                    />
                                 </div>
                                 <div className="mt-[-12.5px] space-y-4  ">
                                     <h1 className="font-secondary text-center text-2xl font-bold">{item.title}</h1>
