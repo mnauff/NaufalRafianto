@@ -7,17 +7,17 @@ const Footer = () => {
             <div className="flex flex-col items-center justify-center gap-3">
                 <div className="flex gap-5">
                     <UnstyledLink href="https://www.instagram.com/naufal.rafianto/">
-                        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-black hover:bg-gradient-to-br hover:from-pink-500 hover:to-violet-500 hover:text-white">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black hover:bg-gradient-to-br hover:from-pink-500 hover:to-violet-500 hover:text-white">
                             <BsInstagram />
                         </div>
                     </UnstyledLink>
                     <UnstyledLink href="https://github.com/naufalRafianto">
-                        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-black hover:bg-gradient-to-br hover:from-pink-500 hover:to-violet-500 hover:text-white">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black hover:bg-gradient-to-br hover:from-pink-500 hover:to-violet-500 hover:text-white">
                             <BsGithub />
                         </div>
                     </UnstyledLink>
                     <UnstyledLink href="https://www.linkedin.com/in/naufal-rafianto-4159a8206/">
-                        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-black hover:bg-gradient-to-br hover:from-pink-500 hover:to-violet-500 hover:text-white">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black hover:bg-gradient-to-br hover:from-pink-500 hover:to-violet-500 hover:text-white">
                             <BsLinkedin />
                         </div>
                     </UnstyledLink>
