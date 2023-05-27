@@ -23,8 +23,8 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
         }
     }, [selectedFilter])
     return (
-        <div>
-            <div className="inline-flex items-center justify-start space-x-4 py-5 max-md:ml-5">
+        <div className="flex flex-col gap-5">
+            <div className="inline-flex h-[3rem] items-center justify-start space-x-4 rounded bg-white bg-opacity-10 px-5 max-md:ml-5">
                 <span>Filter by:</span>
                 {type.map((type) => {
                     return (

@@ -10,7 +10,7 @@ import Image from 'next/image'
 import Content from '@/container/ContentContainer'
 
 export const metadata: Metadata = {
-    title: 'Project',
+    title: 'Project Details Page',
 }
 const page = async ({ params }: { params: { id: string } }) => {
     const { id } = params

@@ -9,10 +9,6 @@ import Button from '@/components/ui/button/Button'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { BsRocket } from 'react-icons/bs'
 
-export const metadata = {
-    title: 'Home Page | MNR',
-}
-
 export default function Home() {
     return (
         <StarsContainer className="h-auto">

@@ -22,8 +22,14 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint', 'unused-imports'],
     rules: {
+        'sort-imports': [
+            'error',
+            {
+                ignoreDeclarationSort: true,
+            },
+        ],
         'no-unused-vars': 'off',
-        'unused-imports/no-unused-imports': 'error',
+        'unused-imports/no-unused-imports': 'warn',
         'unused-imports/no-unused-vars': [
             'warn',
             {
