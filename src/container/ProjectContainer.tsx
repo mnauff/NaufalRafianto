@@ -80,7 +80,9 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                         </div>
                     )
                 })}
-                {filteredData.length === 0 && <Toaster position="top-center" reverseOrder={false} />}
+                <div className="z-50">
+                    {filteredData.length === 0 && <Toaster position="top-center" reverseOrder={false} />}
+                </div>
             </div>
         </div>
     )
