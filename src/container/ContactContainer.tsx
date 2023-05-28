@@ -44,7 +44,7 @@ const ContactContainer = () => {
         const loadingToast = toaster.loading('Sending email...')
         const config = {
             method: 'post',
-            url: process.env.URL_PROD,
+            url: 'https://mnr.vercel.app',
             headers: {
                 'Content-Type': 'application/json',
             },
