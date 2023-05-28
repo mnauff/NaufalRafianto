@@ -18,9 +18,9 @@ const Page = async () => {
             <div className="flex flex-col gap-10">
                 <Heading className="text-center text-3xl">Project Overview</Heading>
                 <ProjectContainer data={data} />
-                <UnstyledLink href="/project" className="mx-auto">
+                <UnstyledLink href="/contact" className="mx-auto">
                     <Button type="button" className="gap-2 px-3 py-2" color="second">
-                        <span>Send me a letter!</span>
+                        <span>Contact Me!</span>
                         <HiOutlineMail fontSize={24} />
                     </Button>
                 </UnstyledLink>
