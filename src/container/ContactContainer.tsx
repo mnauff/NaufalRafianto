@@ -44,7 +44,7 @@ const ContactContainer = () => {
         const loadingToast = toaster.loading('Sending email...')
         const config = {
             method: 'post',
-            url: 'api/submit',
+            url: '/api/submit',
             headers: {
                 'Content-Type': 'application/json',
             },
