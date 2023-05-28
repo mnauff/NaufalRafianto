@@ -1,9 +1,10 @@
 'use client'
+import LottiePlayer from '@/components/lottie/Lottie'
 import Button from '@/components/ui/button/Button'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
-import { Toaster, toast } from 'react-hot-toast'
+import AnimationData from '../../public/404/data_not_found.json'
 
 interface ProjectDetails {
     data: Project[]
@@ -24,29 +25,26 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
         }
     }, [selectedFilter])
 
-    function setType(type: string | string[]) {
-        setSelectedFilter(type)
-        if (filteredData.length === 0) {
-            toast.error('Project is not Found')
-        }
-    }
     return (
         <div className="flex flex-col gap-5">
-            <div className="mx-auto flex h-[3rem] w-1/2 items-center justify-center space-x-4 rounded bg-white bg-opacity-10 px-5 max-md:ml-5">
+            <div className="mx-auto flex h-[3rem] w-2/3  items-center justify-center space-x-1 rounded bg-white bg-opacity-10 px-5 max-md:w-4/5">
                 {type.map((type) => {
                     return (
                         <div key={type}>
                             {selectedFilter === type ? (
                                 <Button
                                     color="first"
-                                    className="px-2 py-1 capitalize"
+                                    className="px-20 py-2 capitalize max-md:px-10"
                                     type="button"
-                                    onClick={() => setType(type)}
+                                    onClick={() => setSelectedFilter(type)}
                                 >
                                     {type}
                                 </Button>
                             ) : (
-                                <button className="capitalize focus:outline-none" onClick={() => setType(type)}>
+                                <button
+                                    className="rounded px-10 py-2 capitalize hover:bg-violet-500 focus:outline-none max-md:px-5"
+                                    onClick={() => setSelectedFilter(type)}
+                                >
                                     {type}
                                 </button>
                             )}
@@ -80,9 +78,12 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                         </div>
                     )
                 })}
-                <div className="z-50">
-                    {filteredData.length === 0 && <Toaster position="bottom-center" reverseOrder={false} />}
-                </div>
+                {filteredData.length <= 0 && (
+                    <div className="mx-auto flex w-1/2 flex-col space-y-2">
+                        <LottiePlayer AnimationData={AnimationData} />
+                        <p className="text-center text-xl">Project is not found!</p>
+                    </div>
+                )}
             </div>
         </div>
     )

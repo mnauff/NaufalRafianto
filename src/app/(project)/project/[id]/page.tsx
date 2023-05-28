@@ -19,7 +19,7 @@ const page = async ({ params }: { params: { id: string } }) => {
     return (
         <StarsContainer className="h-auto">
             <div className="my-3 inline-flex items-center space-x-2 px-3 max-md:mb-10 max-md:ml-5">
-                <StyledLink href="/project" className="font-bold after:bg-orange-500">
+                <StyledLink href="/project" className="font-bold after:bg-violet-500">
                     Project
                 </StyledLink>
                 <div className="mt-2 inline-flex">
@@ -36,7 +36,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                                 <Button type="button" className="px-1 py-1 text-sm">
                                     Website
                                 </Button>
-                                <StyledLink className="after:bg-orange-500" href={data?.link}>
+                                <StyledLink className="after:bg-violet-500" href={data?.link}>
                                     {data?.link}
                                 </StyledLink>
                             </div>
@@ -65,7 +65,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                                 <div className="h-2 w-2 rounded bg-yellow-500"></div>
                                 <div className="h-2 w-2 rounded bg-green-500"></div>
                             </div>
-                            <div className="max-md:h-[95%] max-md:w-11/12">
+                            <div>
                                 <Image className="rounded" alt="gallery" width={540} height={303} src={item} />
                             </div>
                         </div>

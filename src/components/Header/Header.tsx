@@ -17,11 +17,7 @@ export default function Header() {
                     className={merge(
                         pathname === '/'
                             ? 'rounded border-0 bg-violet-700 bg-opacity-30 px-2 py-1 text-violet-500 after:bg-violet-500 after:hover:w-0'
-                            : pathname === '/project'
-                            ? 'after:bg-pink-500'
-                            : pathname === '/send-letter'
-                            ? 'after:bg-cyan-500'
-                            : 'after:bg-orange-500'
+                            : ''
                     )}
                     href="/"
                 >
@@ -29,31 +25,16 @@ export default function Header() {
                 </StyledLink>
                 <StyledLink
                     className={merge(
-                        pathname === '/project'
-                            ? 'rounded border-0 bg-pink-700 bg-opacity-30 px-2 py-1 text-pink-500 after:bg-pink-500 after:hover:w-0'
-                            : pathname === '/'
-                            ? ''
-                            : pathname === '/send-letter'
-                            ? 'after:bg-cyan-500'
-                            : 'after:bg-orange-500'
+                        pathname === '/project' || pathname?.startsWith('/project/')
+                            ? 'rounded border-0 bg-violet-700 bg-opacity-30 px-2 py-1 text-violet-500 after:bg-violet-500 after:hover:w-0'
+                            : ''
                     )}
                     href="/project"
                 >
                     Project
                 </StyledLink>
                 <div className={'inline-flex items-center gap-2'}>
-                    <StyledLink
-                        href="https://github.com/NaufalRafianto/mnr"
-                        className={`${
-                            pathname === '/project'
-                                ? ' after:bg-pink-500'
-                                : pathname === '/'
-                                ? ''
-                                : pathname === '/send-letter'
-                                ? 'after:bg-cyan-500'
-                                : 'after:bg-orange-500'
-                        }`}
-                    >
+                    <StyledLink href="https://github.com/NaufalRafianto/mnr" className="after:bg-violet-500">
                         Source
                     </StyledLink>
                     <FaGithub />
