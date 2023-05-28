@@ -8,8 +8,8 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
         port: 465,
         secure: true,
         auth: {
-            user: process.env.user,
-            pass: process.env.pass,
+            user: process.env.GMAIL_EMAIL_ADDRESS,
+            pass: process.env.GMAIL_PASSWORD,
         },
     })
 
