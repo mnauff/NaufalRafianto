@@ -1,10 +1,10 @@
 'use client'
-import LottiePlayer from '@/components/lottie/Lottie'
+import LottiePlayer from '@/components/Lottie'
 import Button from '@/components/ui/button/Button'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
-import AnimationData from '../../public/404/data_not_found.json'
+import AnimationData from '../../public/assets/lottie/404/data_not_found.json'
 
 interface ProjectDetails {
     data: Project[]
@@ -42,7 +42,7 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                                 </Button>
                             ) : (
                                 <button
-                                    className="rounded px-10 py-2 capitalize hover:bg-violet-500 focus:outline-none max-md:px-5"
+                                    className="rounded px-10 py-2 capitalize hover:bg-blue-500 focus:outline-none max-md:px-5"
                                     onClick={() => setSelectedFilter(type)}
                                 >
                                     {type}
@@ -57,7 +57,7 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                     return (
                         <div
                             key={item.id}
-                            className="flex h-[405px] w-[305px] items-center justify-center rounded bg-pink-700 bg-gradient-to-br from-pink-500 via-violet-500 to-cyan-500"
+                            className="flex h-[405px] w-[305px] items-center justify-center rounded bg-pink-700 bg-gradient-to-br from-pink-500 via-blue-500 to-cyan-500"
                             onClick={() => router.push(`/project/${item.id}`)}
                         >
                             <div className="grid h-[400px] w-[300px] cursor-pointer grid-rows-2 rounded  bg-black p-7 hover:bg-opacity-75 ">

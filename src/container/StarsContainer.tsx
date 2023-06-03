@@ -1,12 +1,13 @@
 /* eslint-disable react/no-unknown-property */
 'use client'
-import Footer from '@/components/Footer/Footer'
-import Header from '@/components/Header/Header'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import { merge } from '@/lib/merge'
 import { PointMaterial, Points, Preload } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 import * as random from 'maath/random/dist/maath-random.cjs'
 import * as React from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 function Stars({ ...props }) {
     const ref = React.useRef<THREE.Points>(null)
@@ -39,10 +40,18 @@ export default function StarsContainer({ children, className }: { children: Reac
                     <Preload all />
                 </Canvas>
             </div>
-            <div className="mx-auto min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px] max-md:pt-28">
-                <div>{children}</div>
-                <Footer />
-            </div>
+            <AnimatePresence mode="wait" initial={true}>
+                <motion.div
+                    initial={{ opacity: 0, x: 0, y: 100 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
+                    exit={{ opacity: 0, x: 0, y: 100 }}
+                    transition={{ duration: 1, ease: 'easeInOut' }}
+                    className="mx-auto min-h-screen max-w-[700px] pt-20 shadow backdrop-blur-[2px] max-md:pt-28"
+                >
+                    <div>{children}</div>
+                    <Footer />
+                </motion.div>
+            </AnimatePresence>
         </main>
     )
 }

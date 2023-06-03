@@ -1,11 +1,11 @@
 import Content from '@/container/ContentContainer'
 import StarsContainer from '@/container/StarsContainer'
 import React from 'react'
-import AnimationData from '../../../public/404/page_not_found.json'
+import AnimationData from '../../../public/assets/lottie/404/page_not_found.json'
 import { StyledLink } from '@/components/ui/link/Link'
 import { Heading } from '@/components/ui/Heading'
 import { Metadata } from 'next'
-import LottiePlayer from '@/components/lottie/Lottie'
+import LottiePlayer from '@/components/Lottie'
 export const metadata: Metadata = {
     title: 'Page not Found',
 }

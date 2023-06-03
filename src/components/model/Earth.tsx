@@ -8,7 +8,8 @@ import * as React from 'react'
 import CanvasLoader from './CanvasLoader'
 
 const Model = () => {
-    const gltf = useLoader(GLTFLoader, '/earth/scene.gltf')
+    const gltf = useLoader(GLTFLoader, '/assets/3d/earth/scene.gltf')
+
     return (
         <mesh>
             <primitive object={gltf.scene} scale={0.35} position-y={0} rotation-y={0} rotation-x={-0.25} />

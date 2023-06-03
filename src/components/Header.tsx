@@ -1,7 +1,7 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-import { StyledLink, UnstyledLink } from '../ui/link/Link'
+import { StyledLink, UnstyledLink } from './ui/link/Link'
 import { FaGithub } from 'react-icons/fa'
 import { merge } from '@/lib/merge'
 
@@ -16,7 +16,7 @@ export default function Header() {
                 <StyledLink
                     className={merge(
                         pathname === '/'
-                            ? 'rounded border-0 bg-violet-700 bg-opacity-30 px-2 py-1 text-violet-500 after:bg-violet-500 after:hover:w-0'
+                            ? 'rounded border-0 bg-blue-700 bg-opacity-30 px-2 py-1 text-blue-500 after:bg-blue-500 after:hover:w-0'
                             : ''
                     )}
                     href="/"
@@ -26,7 +26,7 @@ export default function Header() {
                 <StyledLink
                     className={merge(
                         pathname === '/project' || pathname?.startsWith('/project/')
-                            ? 'rounded border-0 bg-violet-700 bg-opacity-30 px-2 py-1 text-violet-500 after:bg-violet-500 after:hover:w-0'
+                            ? 'rounded border-0 bg-blue-700 bg-opacity-30 px-2 py-1 text-blue-500 after:bg-blue-500 after:hover:w-0'
                             : ''
                     )}
                     href="/project"
@@ -34,7 +34,7 @@ export default function Header() {
                     Project
                 </StyledLink>
                 <div className={'inline-flex items-center gap-2'}>
-                    <StyledLink href="https://github.com/NaufalRafianto/mnr" className="after:bg-violet-500">
+                    <StyledLink href="https://github.com/NaufalRafianto/mnr" className="after:bg-blue-500">
                         Source
                     </StyledLink>
                     <FaGithub />
