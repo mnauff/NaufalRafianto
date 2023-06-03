@@ -67,7 +67,7 @@ export default function Home() {
                         </UnstyledLink>
                     </div>
                 </Content>
-                <Content size="small" className="-mt-10 max-md:mt-10">
+                <Content size="medium" className="-mt-10 max-md:mt-10">
                     <Heading className="relative mb-5 ml-5 w-fit cursor-pointer text-start text-xl font-bold uppercase after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:bg-blue-500 after:bg-opacity-50 after:hover:bg-opacity-100">
                         Bio
                     </Heading>
@@ -105,13 +105,15 @@ export default function Home() {
                             </tr>
                         </tbody>
                     </table>
+                    <div className="mt-5 flex w-full justify-center     max-md:mt-10">
+                        <UnstyledLink href="/contact">
+                            <Button type="button" className="gap-2 px-3 py-2" color="second">
+                                <span>Contact Me!</span>
+                                <HiOutlineMail fontSize={24} />
+                            </Button>
+                        </UnstyledLink>
+                    </div>
                 </Content>
-                <UnstyledLink href="/contact" className="mx-auto mt-5">
-                    <Button type="button" className="gap-2 px-3 py-2" color="second">
-                        <span>Contact Me!</span>
-                        <HiOutlineMail fontSize={24} />
-                    </Button>
-                </UnstyledLink>
             </div>
         </StarsContainer>
     )
