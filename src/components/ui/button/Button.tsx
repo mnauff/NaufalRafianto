@@ -12,7 +12,7 @@ const Button = ({ children, className, type, ...props }: ButtonProps) => {
         <button
             type={type}
             className={merge(
-                'flex items-center justify-center rounded bg-violet-700 bg-opacity-30 text-violet-500 hover:bg-violet-500 hover:text-white',
+                'flex items-center justify-center rounded bg-blue-700 bg-opacity-30 text-blue-500 hover:bg-blue-500 hover:text-white',
                 className
             )}
             {...props}

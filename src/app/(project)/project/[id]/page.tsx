@@ -19,7 +19,7 @@ const page = async ({ params }: { params: { id: string } }) => {
     return (
         <StarsContainer className="h-auto">
             <div className="my-3 inline-flex items-center space-x-2 px-3 max-md:mb-10 max-md:ml-5">
-                <StyledLink href="/project" className="font-bold after:bg-violet-500">
+                <StyledLink href="/project" className="font-bold">
                     Project
                 </StyledLink>
                 <div className="mt-2 inline-flex">
@@ -36,9 +36,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                                 <Button type="button" className="px-1 py-1 text-sm">
                                     Website
                                 </Button>
-                                <StyledLink className="after:bg-violet-500" href={data?.link}>
-                                    {data?.link}
-                                </StyledLink>
+                                <StyledLink href={data?.link}>{data?.link}</StyledLink>
                             </div>
                             {data?.stack && (
                                 <div className="inline-flex items-center space-x-2 pl-10 max-md:pl-2">
@@ -58,7 +56,7 @@ const page = async ({ params }: { params: { id: string } }) => {
                     {data?.gallery.map((item: string, i: number) => (
                         <div
                             key={i}
-                            className="relative flex h-[305px] w-[550px] items-center justify-center rounded bg-gray-100 bg-opacity-75 max-md:h-[205px] max-md:w-[355px]"
+                            className="relative flex h-[305px] w-[550px] items-end justify-center rounded bg-gray-100 bg-opacity-75 max-md:h-[205px] max-md:w-[355px]"
                         >
                             <div className="absolute left-1 top-1 inline-flex space-x-1">
                                 <div className="h-2 w-2 rounded bg-red-500"></div>

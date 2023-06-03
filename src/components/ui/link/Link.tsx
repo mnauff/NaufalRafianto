@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { useRouter } from 'next/navigation'
 import { merge } from '@/lib/merge'
+import Link from 'next/link'
 
 interface LinkProps extends React.HTMLProps<HTMLAnchorElement> {
     href: string
@@ -11,7 +12,7 @@ interface LinkProps extends React.HTMLProps<HTMLAnchorElement> {
     children: React.ReactNode
 }
 
-export const UnstyledLink = ({ href, rel, target, children, className, ...props }: LinkProps) => {
+export const UnstyledLink = ({ href, rel, target, children, className }: LinkProps) => {
     const router = useRouter()
     const isInternalLink = href.startsWith('/') || href.startsWith('#')
 
@@ -24,9 +25,9 @@ export const UnstyledLink = ({ href, rel, target, children, className, ...props 
         }
     }
     return (
-        <a className={merge(className)} href={href} onClick={handleClick} {...props}>
+        <Link className={merge(className)} href={href} onClick={handleClick}>
             {children}
-        </a>
+        </Link>
     )
 }
 
@@ -34,7 +35,7 @@ export const StyledLink = ({ className, href, children }: LinkProps) => {
     return (
         <UnstyledLink
             className={merge(
-                'relative border-b border-dotted after:absolute after:bottom-[-1.5px] after:left-0 after:h-[.125rem] after:w-0 after:bg-violet-500 after:duration-100 after:hover:w-full',
+                'relative border-b border-dotted after:absolute after:bottom-[-1.5px] after:left-0 after:h-[.125rem] after:w-0 after:bg-blue-500 after:duration-100 after:hover:w-full',
                 className
             )}
             href={href}

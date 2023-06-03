@@ -1,11 +1,13 @@
+import LottiePlayer from '@/components/Lottie'
 import React from 'react'
-import { FaSpinner } from 'react-icons/fa'
+import AnimationData from '../../public/assets/lottie/loading/loading.json'
 
 const loading = () => {
     return (
-        <div className="flex h-screen flex-col items-center justify-center bg-black text-center text-9xl max-md:text-5xl">
-            <FaSpinner className="animate-spin" />
-            <h1>Loading</h1>
+        <div className="flex h-screen items-center justify-center">
+            <div className="h-1/2 w-1/2">
+                <LottiePlayer AnimationData={AnimationData} />
+            </div>
         </div>
     )
 }
