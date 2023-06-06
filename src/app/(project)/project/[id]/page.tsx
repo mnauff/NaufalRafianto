@@ -34,7 +34,13 @@ const page = async ({ params }: { params: { id: string } }) => {
                         <div className="flex flex-col">
                             <div className="inline-flex space-x-2 pb-3 pl-10 pt-10 max-md:pl-2">
                                 <Button type="button" className="px-1 py-1 text-sm">
-                                    Website
+                                    Platfrom
+                                </Button>
+                                <div>{data?.type}</div>
+                            </div>
+                            <div className="inline-flex space-x-2 pb-3 pl-10 max-md:pl-2">
+                                <Button type="button" className="px-1 py-1 text-sm">
+                                    Url
                                 </Button>
                                 <StyledLink href={data?.link}>{data?.link}</StyledLink>
                             </div>
@@ -56,14 +62,14 @@ const page = async ({ params }: { params: { id: string } }) => {
                     {data?.gallery.map((item: string, i: number) => (
                         <div
                             key={i}
-                            className="relative flex h-[305px] w-[550px] items-end justify-center rounded bg-gray-100 bg-opacity-75 max-md:h-[205px] max-md:w-[355px]"
+                            className="relative flex h-[310px] w-[550px] items-end justify-center rounded bg-gray-50 bg-opacity-75 max-md:h-[205px] max-md:w-[355px]"
                         >
                             <div className="absolute left-1 top-1 inline-flex space-x-1">
                                 <div className="h-2 w-2 rounded bg-red-500"></div>
                                 <div className="h-2 w-2 rounded bg-yellow-500"></div>
                                 <div className="h-2 w-2 rounded bg-green-500"></div>
                             </div>
-                            <div>
+                            <div className="py-1">
                                 <Image className="rounded" alt="gallery" width={540} height={303} src={item} />
                             </div>
                         </div>

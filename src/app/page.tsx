@@ -79,7 +79,7 @@ export default function Home() {
                                         2003
                                     </Button>
                                 </td>
-                                <td className="px-5 max-md:py-2">Born in Mataram City, Indonesia</td>
+                                <td className="px-5 max-md:py-2">Born in Indonesia</td>
                             </tr>
                             <tr>
                                 <td className="px-5  font-black text-pink-500">

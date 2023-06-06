@@ -52,30 +52,31 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                     )
                 })}
             </div>
-            <div className="max-md:flex max-md:flex-col max-md:items-center">
+            <ul className="max-md:flex max-md:flex-col max-md:items-center">
                 {filteredData.map((item) => {
                     return (
-                        <div
-                            key={item.id}
-                            className="flex h-[405px] w-[305px] items-center justify-center rounded bg-pink-700 bg-gradient-to-br from-pink-500 via-blue-500 to-cyan-500"
-                            onClick={() => router.push(`/project/${item.id}`)}
-                        >
-                            <div className="grid h-[400px] w-[300px] cursor-pointer grid-rows-2 rounded  bg-black p-7 hover:bg-opacity-75 ">
-                                <div className="h-1/2 w-full cursor-pointer bg-white duration-300 hover:scale-110 hover:shadow">
-                                    <Image
-                                        width={480}
-                                        height={320}
-                                        src={item.thumbnail}
-                                        alt="project image"
-                                        className="object-cover"
-                                    />
+                        <li key={item.id}>
+                            <button
+                                className="flex h-[405px] w-[305px] items-center justify-center rounded bg-pink-700 bg-gradient-to-br from-pink-500 via-blue-500 to-cyan-500"
+                                onClick={() => router.push(`/project/${item.id}`)}
+                            >
+                                <div className="grid h-[400px] w-[300px] cursor-pointer grid-rows-2 rounded  bg-black p-7 hover:bg-opacity-75 ">
+                                    <div className="h-1/2 w-full cursor-pointer bg-white duration-300 hover:scale-110 hover:shadow">
+                                        <Image
+                                            width={480}
+                                            height={320}
+                                            src={item.thumbnail}
+                                            alt="project image"
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <div className="mt-[-12.5px] space-y-4  ">
+                                        <h1 className="font-secondary text-center text-2xl font-bold">{item.title}</h1>
+                                        <p className=" text-justify text-sm">{item.detail}</p>
+                                    </div>
                                 </div>
-                                <div className="mt-[-12.5px] space-y-4  ">
-                                    <h1 className="font-secondary text-center text-2xl font-bold">{item.title}</h1>
-                                    <p className=" text-justify text-sm">{item.detail}</p>
-                                </div>
-                            </div>
-                        </div>
+                            </button>
+                        </li>
                     )
                 })}
                 {filteredData.length <= 0 && (
@@ -84,7 +85,7 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                         <p className="text-center text-xl">Project is not found!</p>
                     </div>
                 )}
-            </div>
+            </ul>
         </div>
     )
 }
