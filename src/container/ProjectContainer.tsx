@@ -2,16 +2,15 @@
 import LottiePlayer from '@/components/Lottie'
 import Button from '@/components/ui/button/Button'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import React from 'react'
 import AnimationData from '../../public/assets/lottie/404/data_not_found.json'
+import { UnstyledLink } from '@/components/ui/link/Link'
 
 interface ProjectDetails {
     data: Project[]
 }
 
 const ProjectContainer = ({ data }: ProjectDetails) => {
-    const router = useRouter()
     const type = ['all', 'website', 'mobile']
     const [selectedFilter, setSelectedFilter] = React.useState<string | string[]>('all')
     const [filteredData, setFilteredData] = React.useState<Project[]>(data)
@@ -56,9 +55,9 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                 {filteredData.map((item) => {
                     return (
                         <li key={item.id}>
-                            <button
+                            <UnstyledLink
+                                href={`/project/${item.id}`}
                                 className="flex h-[405px] w-[305px] items-center justify-center rounded bg-pink-700 bg-gradient-to-br from-pink-500 via-blue-500 to-cyan-500"
-                                onClick={() => router.push(`/project/${item.id}`)}
                             >
                                 <div className="grid h-[400px] w-[300px] cursor-pointer grid-rows-2 rounded  bg-black p-7 hover:bg-opacity-75 ">
                                     <div className="h-1/2 w-full cursor-pointer bg-white duration-300 hover:scale-110 hover:shadow">
@@ -75,7 +74,7 @@ const ProjectContainer = ({ data }: ProjectDetails) => {
                                         <p className=" text-justify text-sm">{item.detail}</p>
                                     </div>
                                 </div>
-                            </button>
+                            </UnstyledLink>
                         </li>
                     )
                 })}

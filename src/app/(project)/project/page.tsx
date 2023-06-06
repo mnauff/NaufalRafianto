@@ -11,8 +11,12 @@ export const metadata = {
     title: 'Project Page',
 }
 
+async function getData() {
+    return await prisma.project.findMany()
+}
+
 const Page = async () => {
-    const data: Project[] = await prisma.project.findMany()
+    const data: Project[] = await getData()
     return (
         <StarsContainer className="h-screen ">
             <div className="flex flex-col gap-10">

@@ -12,9 +12,13 @@ import Content from '@/container/ContentContainer'
 export const metadata: Metadata = {
     title: 'Project Details Page',
 }
+
+async function getData(id: string) {
+    return await prisma.project.findUnique({ where: { id } })
+}
 const page = async ({ params }: { params: { id: string } }) => {
     const { id } = params
-    const data = await prisma.project.findUnique({ where: { id } })
+    const data = await getData(id)
 
     return (
         <StarsContainer className="h-auto">
@@ -33,20 +37,20 @@ const page = async ({ params }: { params: { id: string } }) => {
                         <p className="max-md:text-justify">{data?.detail}</p>
                         <div className="flex flex-col">
                             <div className="inline-flex space-x-2 pb-3 pl-10 pt-10 max-md:pl-2">
-                                <Button type="button" className="px-1 py-1 text-sm">
+                                <Button type="button" className="px-1.5 py-1 text-sm font-bold capitalize">
                                     Platfrom
                                 </Button>
                                 <div>{data?.type}</div>
                             </div>
                             <div className="inline-flex space-x-2 pb-3 pl-10 max-md:pl-2">
-                                <Button type="button" className="px-1 py-1 text-sm">
+                                <Button type="button" className="px-1.5 py-1 text-sm font-bold">
                                     Url
                                 </Button>
                                 <StyledLink href={data?.link}>{data?.link}</StyledLink>
                             </div>
                             {data?.stack && (
                                 <div className="inline-flex items-center space-x-2 pl-10 max-md:pl-2">
-                                    <Button type="button" className="px-1 py-1 text-sm">
+                                    <Button type="button" className="px-1.5 py-1 text-sm font-bold">
                                         Stack
                                     </Button>
                                     <div>{data?.stack}</div>
