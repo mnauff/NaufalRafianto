@@ -4,18 +4,23 @@ import StarsContainer from '@/container/StarsContainer'
 import { prisma } from '@/lib/prisma'
 import React from 'react'
 import { MdKeyboardArrowRight } from 'react-icons/md'
-import { Metadata } from 'next'
 import { Heading } from '@/components/ui/Heading'
 import Image from 'next/image'
 import Content from '@/container/ContentContainer'
 
-export const metadata: Metadata = {
-    title: 'Project Details Page',
-}
-
 async function getData(id: string) {
     return await prisma.project.findUnique({ where: { id } })
 }
+
+export async function generateMetadata({ params }: { params: { id: string } }) {
+    const { id } = params
+    const data = await getData(id)
+    return {
+        title: data?.title,
+        description: data?.detail,
+    }
+}
+
 const page = async ({ params }: { params: { id: string } }) => {
     const { id } = params
     const data = await getData(id)
