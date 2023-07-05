@@ -1,6 +1,6 @@
 ###Hey there! 👋
 
-I'm _Naufal_, a passionate software developer and technology enthusiast.
+I'm _Naufal_, a passionate software developer and technology enthusiast.<br/>
 🚀 **About Me**
     *💻 I love writing clean, efficient, and scalable code.
     *🌱 I'm constantly learning and exploring new technologies.
