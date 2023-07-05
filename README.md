@@ -1,11 +1,11 @@
 ###Hey there! 👋
 
 I'm _Naufal_, a passionate software developer and technology enthusiast.<br/>
-🚀 **About Me**
-    *💻 I love writing clean, efficient, and scalable code.
-    *🌱 I'm constantly learning and exploring new technologies.
-    *🎨 I'm a creative problem solver with an eye for design.
-    *🎮 I enjoy playing video games in my free time.
+🚀 **About Me**<br/>
+    *💻 I love writing clean, efficient, and scalable code.<br/>
+    *🌱 I'm constantly learning and exploring new technologies.<br/>
+    *🎨 I'm a creative problem solver with an eye for design.<br/>
+    *🎮 I enjoy playing video games in my free time.<br/>
 
 🛠️ **Tech Stack**
 Here are some of the technologies and tools I've been working with:
