@@ -21,4 +21,7 @@ I'm _Naufal_, a passionate software developer and technology enthusiast.<br/>
     - 🌐 [Personal Website](https://mnr.vercel.app/)
 
 📈 **GitHub Stats** <br/>
-[![Naufal's GitHub stats](https://github-readme-stats.vercel.app/api?username=NaufalRafianto&show_icons=true&theme=graywhite)](https://github.com/NaufalRafianto/github-readme-stats)
+[![Naufal's GitHub stats](https://github-readme-stats.vercel.app/api?username=NaufalRafianto&show_icons=true&theme=graywhite)](https://github.com/NaufalRafianto/github-readme-stats)<br/>
+
+📊 **Top Languages**<br/>
+[![Naufal's Top Languanges](https://github-readme-stats.vercel.app/api/top-langs/?username=NaufalRafianto&layout=compact)](https://github.com/NaufalRafianto/github-readme-stats)
