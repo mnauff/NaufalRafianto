@@ -7,7 +7,7 @@ I'm _Naufal_, a passionate software developer and technology enthusiast.<br/>
     - 🎨 I'm a creative problem solver with an eye for design.
     - 🎮 I enjoy playing video games in my free time.
     
-- 🛠️ *-Tech Stack**
+- 🛠️ *-Tech Stack**<br/>
   Here are some of the technologies and tools I've been working with:
     - **Languages**: JavaScript, TypeScript, Python
     - **Frontend**: React.js, Next.js, HTML, CSS, Tailwind CSS
@@ -16,6 +16,7 @@ I'm _Naufal_, a passionate software developer and technology enthusiast.<br/>
     - **Tools**: Git, VS Code, Postman, Docker
     - **Cloud**: AWS, Heroku, Netlify
 
-🌐 Find Me Online
+- 🌐 Find Me Online
     - 💼 [LinkedIn](https://www.linkedin.com/in/naufal-rafianto-4159a8206/)
     - 🌐 [Personal Website](https://mnr.vercel.app/)
+[![Naufal's GitHub stats](https://github-readme-stats.vercel.app/api?username=NaufalRafianto)](https://github.com/NaufalRafianto/github-readme-stats)
