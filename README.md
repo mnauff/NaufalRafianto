@@ -1,7 +1,7 @@
 ###Hey there! 👋
 
 I'm _Naufal_, a passionate software developer and technology enthusiast.<br/>
-- 🚀 **About Me**<br/>
+- 🚀 **About Me**
     -  💻 I love writing clean, efficient, and scalable code.<br/>
     - 🌱 I'm constantly learning and exploring new technologies.<br/>
     - 🎨 I'm a creative problem solver with an eye for design.<br/>
